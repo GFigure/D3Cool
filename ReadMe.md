@@ -1,6 +1,3 @@
-
-项目源码地址：[https://github.com/GFigure/D3Cool](https://github.com/GFigure/D3Cool)
-
 演示效果：[http://yyw.dongfei.xin](http://yyw.dongfei.xin)
 
 ###  Index
