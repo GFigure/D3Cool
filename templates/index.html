@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://alloyteam.github.io/curvejs/ -->
+{% load staticfiles %}
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>JUST FOR YOU</title>
+    {#    <link rel="shortcut icon" href="https://alloyteam.github.io/curvejs/asset/curvejs.ico">#}
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+        #container {
+            text-align: center;
+        }
+    </style>
+
+    <style>
+        body {
+            background-color: #1e1d23;
+            /*opacity: 0;*/
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /*body.ready { opacity: 1; }*/
+
+        .icon-text path,
+        .icon-text polygon {
+            /*opacity: 0;*/
+        }
+
+        .info {
+            text-align: center;
+        }
+
+        .description {
+            /*opacity: 0;*/
+            color: white;
+            margin-top: 20px;
+        }
+
+        .links {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 700px) {
+            .links {
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                flex-direction: row;
+
+            }
+        }
+
+        .button {
+            /*opacity: 0;*/
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 180px;
+            height: 60px;
+            text-decoration: none;
+        }
+
+        .button.blue {
+            color: #5E89FB;
+        }
+
+        .button.blue02 {
+            color: #4e72b8;
+        }
+
+        .button.blue03 {
+            color: #6f60aa;
+        }
+
+        .button.blue04 {
+            color: #009ad6;
+        }
+
+        .button.green {
+            color: #18F38C;
+        }
+
+        .button.green02 {
+            color: #1d953f;
+        }
+
+        .button.green03 {
+            color: #78a355;
+        }
+
+        .button.green04 {
+            color: #ffe600;
+        }
+
+        .button.red {
+            color: #FF1461;
+        }
+
+        .button.red02 {
+            color: #bb505d;
+        }
+
+        .button.red03 {
+            color: #ed1941;
+        }
+
+        .button.red04 {
+            color: #f05b72;
+        }
+
+        .button svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            stroke-width: 1;
+            fill: none;
+            fill-rule: evenodd;
+            stroke: currentColor;
+        }
+
+        .button.green svg {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .button path {
+            scale: .9;
+            transform-origin: 50% 50%;
+        }
+
+        .credits {
+            /*opacity: 0;*/
+            margin-top: 20px;
+            color: #979797;
+        }
+
+        .credits a {
+            position: relative;
+            color: currentColor;
+            text-decoration: none;
+        }
+
+        .credits a:after {
+            content: "";
+            /*opacity: 0;*/
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            border-bottom: 1px solid currentColor;
+            transition: opacity .75s ease;
+        }
+
+        /*.credits a:hover:after {
+          opacity: 1;
+          transition: opacity .25s ease;
+        }*/
+
+        .credits a,
+        .credits span {
+            transition: color .75s ease;
+        }
+
+        .credits a:hover,
+        .highlighted {
+            color: white;
+            transition: color .25s ease;
+        }
+
+        #container {
+            margin-top: 50px;
+        }
+
+        @media only screen and (max-width: 500px) {
+            #container canvas {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="container">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86
+            src="//music.163.com/outchain/player?type=2&id=28442976&auto=1&height=66"></iframe>
+</div>
+<div class="info">
+    <p class="description">
+        Waiting can be so beautiful
+    </p>
+    <div class="links">
+        <a class="button blue" href="{% url 'D3Images' %}" target="_blank">
+            <svg viewBox="0 0 180 60">
+                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
+            </svg>
+            <span>D3Images</span>
+        </a>
+        <a class="button red" href="{% url 'D3HeartAnimation' %}" target="_blank">
+            <svg viewBox="0 0 180 60">
+                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
+            </svg>
+            <span>HeartAnimation</span>
+        </a>
+        <a class="button green" href="{% url 'D3BookFlip' %}" target="_blank">
+            <svg viewBox="0 0 180 60">
+                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
+            </svg>
+            <span>BookFlip</span>
+        </a>
+    </div>
+    <div class="links">
+        <a class="button red02" href="{% url 'D3Wave' %}" target="_blank">
+            <svg viewBox="0 0 180 60">
+                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
+            </svg>
+            <span>Wave</span>
+        </a>
+        <a class="button blue02" href="{% url 'D3UnfoldCube01' %}" target="_blank">
+            <svg viewBox="0 0 180 60">
+                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
+            </svg>
+            <span>UnfoldCube</span>
+        </a>
+        <a class="button green02" href="{% url 'D3PixelGraph' %}" target="_blank">
+            <svg viewBox="0 0 180 60">
+                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
+            </svg>
+            <span>PixelGraph</span>
+        </a>
+    </div>
+    <div class="links">
+        <a class="button blue03" href="{% url 'D3CubePuzzle' %}" target="_blank">
+            <svg viewBox="0 0 180 60">
+                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
+            </svg>
+            <span>CubePuzzle</span>
+        </a>
+        <a class="button green03" href="{% url 'D3Planet' %}" target="_blank">
+            <svg viewBox="0 0 180 60">
+                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
+            </svg>
+            <span>Planet</span>
+        </a>
+        <a class="button red03" href="{% url 'D3ExplodClock' %}" target="_blank">
+            <svg viewBox="0 0 180 60">
+                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
+            </svg>
+            <span>ExplodClock</span>
+        </a>
+    </div>
+    <div class="links">
+        <a class="button green04" href="{% url 'D3LineAvatar' %}" target="_blank">
+            <svg viewBox="0 0 180 60">
+                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
+            </svg>
+            <span>LineAvatar</span>
+        </a>
+        <a class="button red04" href="{% url 'D3ModelCamera' %}" target="_blank">
+            <svg viewBox="0 0 180 60">
+                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
+            </svg>
+            <span>ModelCamera</span>
+        </a>
+        <a class="button blue04" href="{% url 'D3ImageBlock' %}" target="_blank">
+            <svg viewBox="0 0 180 60">
+                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
+            </svg>
+            <span>ImageBlock</span>
+        </a>
+    </div>
+    <p class="credits">
+        v<span class="version">0.1.0</span> © <span class="date">2018</span>&nbsp;&nbsp;&nbsp;&nbsp;<a
+            href="http://blog.dongfei.xin/">Blog.dongfei.xin</a>
+    </p>
+</div>
+
+<!-- <script src="./curvejs_files/main.js"></script> -->
+
+</body>
+</html>

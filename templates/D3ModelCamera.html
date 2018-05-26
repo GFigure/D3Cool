@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>JUST FOR YOU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="{% static 'D3ModelCamera/css/style.css' %}">
+
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+</head>
+
+<body>
+
+<div id="container"></div>
+<video id="myVideo" autoplay controls loop width="640" height="320" style="display:none;" crossOrigin="anonymous">
+    <source src="{% static 'D3ModelCamera/media/rin-SD.mp4' %}" type="video/mp4">
+</video>
+<script src='{% static 'D3ModelCamera/js/three.min.js' %}'></script>
+<script src='{% static 'D3ModelCamera/js/orbit_controls.js' %}'></script>
+<script src='{% static 'D3ModelCamera/js/jquery.min.js' %}'></script>
+
+
+<script src="{% static 'D3ModelCamera/js/index.js' %}"></script>
+
+
+</body>
+
+</html>
