@@ -19,6 +19,8 @@ from app.views import D3PlanetView, D3ModelCameraView, D3CubePuzzleView, D3Pixel
 from app.views import D3LineAvatarView, D3BookFlipView, D3WaveView, D3ExplodClockView
 from app.views import D3HeartAnimationView, D3ImagesView, D3ImageBlockView
 from app.views import D3UnfoldCube01View, D3UnfoldCube02View, IndexView
+from app.views import LandingView, APlayerView
+
 
 from django.views.static import serve
 from D3Cool.settings import STATIC_ROOT
@@ -39,6 +41,9 @@ urlpatterns = [
     url('^D3ExplodClock.html$', D3ExplodClockView.as_view(), name='D3ExplodClock'),
     url('^D3UnfoldCube01.html$', D3UnfoldCube01View.as_view(), name='D3UnfoldCube01'),
     url('^D3UnfoldCube02.html$', D3UnfoldCube02View.as_view(), name='D3UnfoldCube02'),
+
+    url('^APlayer.html$', APlayerView.as_view(), name='APlayer'),
+    url('^landing.html$', LandingView.as_view(), name='landing'),
 
     url(r'^static/(?P<path>.*)$', serve, {'document_root': STATIC_ROOT}),
 

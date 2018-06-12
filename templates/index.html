@@ -7,7 +7,7 @@
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <title>JUST FOR YOU</title>
+    <title>Just For You</title>
     {#    <link rel="shortcut icon" href="https://alloyteam.github.io/curvejs/asset/curvejs.ico">#}
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
     <style>
@@ -247,17 +247,17 @@
         Waiting can be so beautiful
     </p>
     <div class="links">
+        <a class="button green03" href="{% url 'APlayer' %}" target="_blank">
+            <svg viewBox="0 0 180 60">
+                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
+            </svg>
+            <span>APlayer</span>
+        </a>
         <a class="button blue" href="{% url 'D3Images' %}" target="_blank">
             <svg viewBox="0 0 180 60">
                 <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
             </svg>
             <span>D3Images</span>
-        </a>
-        <a class="button red" href="{% url 'D3HeartAnimation' %}" target="_blank">
-            <svg viewBox="0 0 180 60">
-                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
-            </svg>
-            <span>HeartAnimation</span>
         </a>
         <a class="button green" href="{% url 'D3BookFlip' %}" target="_blank">
             <svg viewBox="0 0 180 60">
@@ -293,11 +293,17 @@
             </svg>
             <span>CubePuzzle</span>
         </a>
-        <a class="button green03" href="{% url 'D3Planet' %}" target="_blank">
+{#        <a class="button green03" href="{% url 'D3Planet' %}" target="_blank">#}
+{#            <svg viewBox="0 0 180 60">#}
+{#                <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>#}
+{#            </svg>#}
+{#            <span>Planet</span>#}
+{#        </a>#}
+        <a class="button red" href="{% url 'D3HeartAnimation' %}" target="_blank">
             <svg viewBox="0 0 180 60">
                 <path d="M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z"></path>
             </svg>
-            <span>Planet</span>
+            <span>HeartAnimation</span>
         </a>
         <a class="button red03" href="{% url 'D3ExplodClock' %}" target="_blank">
             <svg viewBox="0 0 180 60">

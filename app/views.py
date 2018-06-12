@@ -77,3 +77,12 @@ class D3UnfoldCube02View(View):
     def get(self, request):
         return render(request, 'D3UnfoldCube02.html')
 
+class APlayerView(View):
+
+    def get(self, request):
+        return render(request, 'APlayer.html')
+
+class LandingView(View):
+
+    def get(self, request):
+        return render(request, 'landing.html')
