@@ -1,5 +1,3 @@
-
-
 项目源码地址：[https://github.com/GFigure/D3Cool](https://github.com/GFigure/D3Cool)
 
 演示效果：[http://sonder.dongfei.xin](http://sonder.dongfei.xin)
@@ -7,9 +5,6 @@
 ###  Index
 
 [首页](http://sonder.dongfei.xin)
-
-
-###  UnfoldCube
 
 
 ###  APlayer
@@ -63,8 +58,5 @@
 
 ###  UnfoldCube
 
-<<<<<<< HEAD
 [正方体旋转](http://sonder.dongfei.xin/D3UnfoldCube02.html)
-=======
-[正方体旋转](http://sonder.dongfei.xin/D3UnfoldCube02.html)
->>>>>>> 58ba8316b84087ed41733b169475b73b7cc61959
+
