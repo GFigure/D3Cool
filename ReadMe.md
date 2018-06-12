@@ -1,15 +1,21 @@
+<<<<<<< HEAD
 
 项目源码地址：[https://github.com/GFigure/D3Cool](https://github.com/GFigure/D3Cool)
 
+=======
+>>>>>>> 58ba8316b84087ed41733b169475b73b7cc61959
 演示效果：[http://sonder.dongfei.xin](http://sonder.dongfei.xin)
 
 ###  Index
 
 [首页](http://sonder.dongfei.xin)
+<<<<<<< HEAD
 
 ###  UnfoldCube
 
 [音乐播放器](http://sonder.dongfei.xin/APlayer.html)
+=======
+>>>>>>> 58ba8316b84087ed41733b169475b73b7cc61959
 
 ###  Planet
 
@@ -57,4 +63,8 @@
 
 ###  UnfoldCube
 
+<<<<<<< HEAD
 [正方体旋转](http://sonder.dongfei.xin/D3UnfoldCube02.html)
+=======
+[正方体旋转](http://sonder.dongfei.xin/D3UnfoldCube02.html)
+>>>>>>> 58ba8316b84087ed41733b169475b73b7cc61959
